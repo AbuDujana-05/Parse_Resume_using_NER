@@ -1,0 +1,140 @@
+.gallery {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.carouselContainer {
+  width: 100%;
+  overflow: hidden;
+  padding: 10px 0;
+}
+
+.carousel {
+  display: flex;
+  gap: 16px;
+  overflow-x: auto;
+  padding-bottom: 16px;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+}
+
+.carousel::-webkit-scrollbar {
+  height: 6px;
+}
+
+.domainBtn {
+  flex: 0 0 auto;
+  scroll-snap-align: start;
+  background: rgba(20, 14, 53, 0.4);
+  backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 16px 24px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: #E8E6F0;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: 'Inter', sans-serif;
+  min-width: 200px;
+}
+
+.domainBtn:hover {
+  background: rgba(52, 55, 160, 0.4);
+  transform: translateY(-2px);
+}
+
+.domainBtn.active {
+  background: rgba(52, 55, 160, 0.6);
+  border-color: rgba(139, 92, 246, 0.8);
+  box-shadow: 0 0 15px rgba(139, 92, 246, 0.4), inset 0 0 10px rgba(255,255,255,0.1);
+}
+
+.icon {
+  font-size: 1.5rem;
+}
+
+.name {
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.loadingState {
+  max-width: 800px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.skeletonText {
+  height: 20px;
+  background: linear-gradient(90deg, rgba(255,255,255,0.05) 25%, rgba(255,255,255,0.1) 50%, rgba(255,255,255,0.05) 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+  border-radius: 4px;
+  margin-bottom: 12px;
+}
+
+.resultsGrid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 24px;
+  align-items: start;
+}
+
+@media (max-width: 900px) {
+  .resultsGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.colTitle {
+  font-size: 1.2rem;
+  color: rgba(255, 255, 255, 0.8);
+  margin-bottom: 16px;
+  letter-spacing: 1px;
+}
+
+.displacyCol {
+  padding: 24px;
+}
+
+.entitiesCol {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.originalText {
+  background: rgba(0, 0, 0, 0.1);
+  padding: 16px;
+  border-radius: 8px;
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin-bottom: 24px;
+}
+
+.displacyContainer {
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  padding: 20px;
+  overflow-x: auto;
+  line-height: 2.5;
+  color: #E8E6F0;
+}
+
+.displacyContainer mark {
+  border-radius: 4px;
+  padding: 2px 6px;
+  margin: 0 4px;
+  font-weight: 500;
+  display: inline-block;
+}
+
+.error {
+  color: #FF6B6B;
+  text-align: center;
+}

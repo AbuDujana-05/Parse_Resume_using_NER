@@ -1,0 +1,18 @@
+{
+  "epochs": 15,
+  "dropout": 0.25,
+  "labels": [
+    "PERSON",
+    "EMAIL",
+    "PHONE",
+    "DESIGNATION",
+    "YEARS_EXPERIENCE",
+    "SKILL",
+    "DEGREE",
+    "INSTITUTION",
+    "LOCATION",
+    "CERTIFICATION",
+    "DOMAIN",
+    "PROJECT_TITLE"
+  ]
+}

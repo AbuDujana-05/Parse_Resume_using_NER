@@ -1,0 +1,97 @@
+.dashboard {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.chartsGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+@media (max-width: 900px) {
+  .chartsGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.chartCard {
+  display: flex;
+  flex-direction: column;
+}
+
+.cardTitle {
+  font-size: 1.1rem;
+  color: rgba(255, 255, 255, 0.8);
+  margin-bottom: 16px;
+  letter-spacing: 1px;
+}
+
+.imageContainer {
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  padding: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 250px;
+}
+
+.chartImage {
+  max-width: 100%;
+  height: auto;
+  border-radius: 4px;
+}
+
+.placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgba(255, 255, 255, 0.3);
+  font-style: italic;
+  width: 100%;
+  height: 100%;
+}
+
+.metricsContainer {
+  margin-top: 10px;
+}
+
+.metricsGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.metricItem {
+  background: rgba(52, 55, 160, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: transform 0.3s;
+}
+
+.metricItem:hover {
+  transform: translateY(-2px);
+  background: rgba(52, 55, 160, 0.4);
+}
+
+.metricLabel {
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.6);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.metricValue {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #4ECDC4;
+  text-shadow: 0 0 10px rgba(78, 205, 196, 0.5);
+}

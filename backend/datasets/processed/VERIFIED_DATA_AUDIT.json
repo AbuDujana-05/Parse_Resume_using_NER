@@ -1,0 +1,41 @@
+{
+  "verified_model_run": "bundled_local_seed_plus_noise",
+  "source_files": [
+    {
+      "file": "local_seed_train.json",
+      "bytes": 186186,
+      "sha256": "772c1fdad21285080a96cdb55ea62bee228c91763f056771ec81fc9c5a29f9c5"
+    },
+    {
+      "file": "local_seed_dev.json",
+      "bytes": 46092,
+      "sha256": "441f4446992ae929a4b890c23ed5c270814953f7df52ef84eb5bd35d048eeab7"
+    },
+    {
+      "file": "combined_train.json",
+      "bytes": 238567,
+      "sha256": "ed178bb51481acd5f247b466a78e57a11467821ac380575540e1ac012ea85891"
+    },
+    {
+      "file": "combined_dev.json",
+      "bytes": 50348,
+      "sha256": "921db513cffe515fa11b4414b581fb4d938f17a014cfb1a7e9141a1ade9afa71"
+    },
+    {
+      "file": "dataset_manifest.json",
+      "bytes": 958,
+      "sha256": "cc962967c50ab550a001c1022ca33fbd2af924c72b8499b479efd73e723fe6af"
+    }
+  ],
+  "combined_training_file": {
+    "file": "combined_train.json",
+    "bytes": 238567,
+    "sha256": "ed178bb51481acd5f247b466a78e57a11467821ac380575540e1ac012ea85891"
+  },
+  "combined_dev_file": {
+    "file": "combined_dev.json",
+    "bytes": 50348,
+    "sha256": "921db513cffe515fa11b4414b581fb4d938f17a014cfb1a7e9141a1ade9afa71"
+  },
+  "public_external_examples_used_in_verified_run": 0
+}

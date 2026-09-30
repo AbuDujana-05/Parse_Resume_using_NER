@@ -1,0 +1,38 @@
+{
+  "schema_version": "1.0",
+  "labels": [
+    "PERSON",
+    "EMAIL",
+    "PHONE",
+    "DESIGNATION",
+    "YEARS_EXPERIENCE",
+    "SKILL",
+    "DEGREE",
+    "INSTITUTION",
+    "LOCATION",
+    "CERTIFICATION",
+    "DOMAIN",
+    "PROJECT_TITLE"
+  ],
+  "local_seed_examples": 174,
+  "external_examples": 0,
+  "synthetic_and_noise_examples": 240,
+  "final_train_examples": 196,
+  "final_dev_examples": 42,
+  "label_counts": {
+    "PERSON": 237,
+    "EMAIL": 229,
+    "PHONE": 229,
+    "DESIGNATION": 227,
+    "YEARS_EXPERIENCE": 228,
+    "SKILL": 617,
+    "DEGREE": 222,
+    "INSTITUTION": 218,
+    "LOCATION": 227,
+    "CERTIFICATION": 164,
+    "DOMAIN": 178,
+    "PROJECT_TITLE": 177
+  },
+  "external_source_files": [],
+  "note": "External public resume datasets are ingested when present under datasets/raw. The bundled local_seed_*.json files are the data shipped with the supplied project; no external record is fabricated when a download is unavailable."
+}

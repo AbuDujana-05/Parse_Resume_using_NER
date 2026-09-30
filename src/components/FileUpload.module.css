@@ -1,0 +1,50 @@
+.uploadZone {
+  background: rgba(20, 14, 53, 0.25);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 2px dashed rgba(255, 255, 255, 0.2);
+  border-radius: 16px;
+  padding: 40px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 100%;
+}
+
+.dragging {
+  border-color: rgba(52, 55, 160, 0.8);
+  background: rgba(52, 55, 160, 0.1);
+}
+
+.fileInput {
+  display: none;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.icon {
+  font-size: 3rem;
+  margin-bottom: 8px;
+}
+
+.text {
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #E8E6F0;
+}
+
+.subtext {
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.fileName {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #4ECDC4;
+}

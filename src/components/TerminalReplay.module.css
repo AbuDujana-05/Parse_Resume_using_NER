@@ -1,0 +1,90 @@
+.terminalWrapper {
+  background: #0D0D0D;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  font-family: 'JetBrains Mono', monospace;
+  width: 100%;
+}
+
+.titleBar {
+  background: #1A1A1A;
+  padding: 10px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.dots {
+  display: flex;
+  gap: 8px;
+}
+
+.dots span {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.dotRed { background: #FF5F56; }
+.dotYellow { background: #FFBD2E; }
+.dotGreen { background: #27C93F; }
+
+.title {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 0.85rem;
+  letter-spacing: 1px;
+}
+
+.replayBtn {
+  background: none;
+  border: none;
+  color: rgba(255, 255, 255, 0.4);
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 0.8rem;
+  transition: color 0.3s;
+}
+
+.replayBtn:hover {
+  color: #fff;
+}
+
+.terminalBody {
+  padding: 16px;
+  height: 400px;
+  overflow-y: auto;
+  font-size: 0.85rem;
+  line-height: 1.5;
+}
+
+.terminalBody::-webkit-scrollbar {
+  width: 6px;
+}
+.terminalBody::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 3px;
+}
+
+.line {
+  word-break: break-all;
+  white-space: pre-wrap;
+}
+
+.textWhite { color: #E8E6F0; }
+.textGreen { color: #00FF41; }
+.textYellow { color: #FFBD2E; }
+
+.cursor {
+  display: inline-block;
+  color: #00FF41;
+  animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}

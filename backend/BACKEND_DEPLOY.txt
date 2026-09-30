@@ -1,0 +1,11 @@
+PYTHON BACKEND DEPLOYMENT
+
+The frontend can be deployed on Netlify. The spaCy/OpenCV/Tesseract backend must
+run on a Python-capable host. This folder includes a Dockerfile with Tesseract and
+Poppler installed for PDF/image OCR.
+
+Example container command:
+  docker build -t parse-resume-ner-backend .
+  docker run -p 8000:8000 parse-resume-ner-backend
+
+Then point Netlify's BACKEND_URL to the public HTTPS URL of that service.

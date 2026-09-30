@@ -1,0 +1,27 @@
+
+╔══════════════════════════════════════════════════════════════════════╗
+║                      PARSE RESUME USING NER                         ║
+║                   FastAPI + spaCy + OpenCV                         ║
+╚══════════════════════════════════════════════════════════════════════╝
+
+[INFO] Loaded spaCy model: C:\Users\DELL\Downloads\Parse_Resume_NER%20project%20FINAL_FIXED\backend\models\ner_model
+
+╔══════════════════════════════════════════════════════════════════════╗
+║                      PARSE RESUME USING NER                         ║
+║                   FastAPI + spaCy + OpenCV                         ║
+╚══════════════════════════════════════════════════════════════════════╝
+
+[INFO] Loaded spaCy model: C:\Users\DELL\Downloads\Parse_Resume_NER%20project%20FINAL_FIXED\backend\models\ner_model
+INFO:     127.0.0.1:61771 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50471 - "POST /api/parse HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60480 - "POST /api/parse HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51046 - "OPTIONS /api/parse HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51046 - "POST /api/parse HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63449 - "POST /api/parse HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63449 - "GET /api/metrics HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63449 - "GET /api/metrics HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63449 - "GET /api/metrics HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63449 - "GET /api/metrics HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62796 - "GET /api/samples/data%20science HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53127 - "POST /api/parse HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53133 - "GET /api/health HTTP/1.1" 200 OK

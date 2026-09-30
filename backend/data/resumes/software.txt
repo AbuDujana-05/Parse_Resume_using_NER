@@ -1,0 +1,1 @@
+John Doe is a Senior Software Engineer with 8 years of experience specializing in Python, Docker, and Kubernetes. John Doe holds a Master of Science from MIT in New York, NY. Certified in AWS Certified Solutions Architect. Email: john.doe@email.com, Phone: (555) 123-4567. He recently completed the Migration to Cloud project successfully.
