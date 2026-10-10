@@ -1,0 +1,15 @@
+NETLIFY
+
+This project has a Vite frontend at the project root. Netlify uses the root package.json/package-lock.json only.
+
+Build command: npm ci && npm run build
+Publish directory: dist
+Node: 22
+Functions directory: netlify/functions
+
+For live spaCy NER parsing after deployment, set the Netlify environment variable:
+BACKEND_URL=https://YOUR-PUBLIC-FASTAPI-BACKEND
+
+The Netlify function proxies /api/* to that backend. No NER result is faked in browser JavaScript. The proof dashboard remains available from bundled assets.
+
+Local terminal use is separate: npm install / npm run dev at the project root, with FastAPI started separately in backend/.

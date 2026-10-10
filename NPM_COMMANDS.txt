@@ -1,0 +1,19 @@
+LOCAL WINDOWS
+-----------
+npm install
+npm run dev
+
+`npm run dev` starts the FastAPI backend first, waits for /api/health with the spaCy model loaded, then starts Vite.
+
+FRONTEND ONLY
+-------------
+npm run dev:frontend
+
+PRODUCTION BUILD
+----------------
+npm run build
+
+BACKEND MANUAL
+--------------
+cd backend
+python app.py

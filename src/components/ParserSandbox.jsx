@@ -78,6 +78,7 @@ const ParserSandbox = () => {
         response = await apiFetch('/api/parse', {
           method: 'POST',
           body: formData,
+          timeoutMs: 180000,
         });
       } else {
         response = await apiFetch('/api/parse', {

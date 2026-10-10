@@ -62,6 +62,27 @@ def extract_text_from_file(file_path: str, file_type: str) -> str:
 
 def extract_text_from_pdf(file_path: str) -> str:
     """Convert PDF pages to images and process with CV spatial layout engine."""
+    # Fast path: extract embedded PDF text without rendering/OCR.
+    if pdfium is not None:
+        try:
+            pdf = pdfium.PdfDocument(file_path)
+            text_pages = []
+
+            for page in pdf:
+                textpage = page.get_textpage()
+                text = textpage.get_text_bounded().strip()
+                if text:
+                    text_pages.append(text)
+
+            direct_text = "\n\n".join(text_pages).strip()
+
+            # Normal text-based resumes don't need OCR at all.
+            if len(direct_text.split()) >= 20:
+                return clean_ocr_text(direct_text)
+
+        except Exception:
+            pass
+
     images = []
     
     # Method 1: Try pdf2image (poppler)
@@ -130,9 +151,18 @@ def extract_text_from_image(image_path_or_array) -> str:
     # A full-page pass best preserves the reading order of ordinary one-column
     # resumes, including the Education line this project needs to classify.
     try:
-        full_page_text = pytesseract.image_to_string(gray, config='--psm 3').strip()
+        full_page_text = pytesseract.image_to_string(
+            gray,
+            config='--psm 3',
+            timeout=20
+        ).strip()
     except Exception:
         full_page_text = ''
+
+    # For normal scanned resumes, one full-page OCR pass is enough.
+    # Keep the existing contour/ROI OCR as a fallback for difficult layouts.
+    if len(full_page_text.split()) >= 20:
+        return clean_ocr_text(full_page_text)
 
     # Step 3: Morphological transformations to merge letters into paragraph/block regions
     kernel = cv2.getStructuringElement(cv2.MORPH_RECT, (18, 5))
